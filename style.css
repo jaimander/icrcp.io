@@ -1,0 +1,24 @@
+body {
+ background: #d3ebfa ;
+}
+
+.gallery__img {
+  width: 100%;
+}
+
+.section--top{
+  height: 100vh; /* viewport height */
+}
+
+.img--logo{
+  width: 100vw;
+  position: absolute;
+}
+
+.img--nombrecompleto{
+  top: 0;
+}
+
+.img--siglas{
+  bottom: 0;
+}
