@@ -1,8 +1,10 @@
 const canvas = document.querySelector('#drawingCanvas');
 const ctx = canvas.getContext('2d');
 
+
 const canvasp51 = document.querySelector('#canvasp5-1');
 const canvasp52 = document.querySelector('#canvasp5-2');
+
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -39,7 +41,7 @@ const handleStart = (event) => {
   }
 
   canvasp51.style.overflow = 'hidden';
-  //canvasp52.style.overflow = 'hidden';
+  canvasp52.style.overflow = 'hidden';
 
 }
 
@@ -62,8 +64,8 @@ function handleEnd(event) {
     ctx.fillRect(touches[i].pageX - 2, touches[i].pageY - 2, 4, 4);
   }
 
-  canvasp51.style.overflow = 'auto';
-  //canvasp52.style.overflow = 'auto';
+  canvasp51.style.overflow = 'visible';
+  canvasp52.style.overflow = 'visible';
 }
 
 
@@ -77,9 +79,10 @@ canvas.addEventListener("touchend", handleEnd, false);
 
 canvasp51.addEventListener("touchstart", handleStart, false);
 canvasp51.addEventListener("touchend", handleEnd, false);
-/*
+
+
 canvasp52.addEventListener("touchstart", handleStart, false);
 canvasp52.addEventListener("touchend", handleEnd, false);
-*/
+
 
 

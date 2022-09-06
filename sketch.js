@@ -19,7 +19,7 @@ const s1 = (sketch1) => {
   sketch1.draw = () => {
     sketch1.background(211, 235, 250);
     sketch1.fill(40);
-    sketch1.ellipse(sketch1.width / 2, sketch1.height / 2, sketch1.width, sketch1.height);
+    sketch1.ellipse(ancho / 2, ancho / 2, sketch1.width - ancho / 10, sketch1.width - ancho / 10);
     sketch1.fill(255);
     sketch1.noStroke();
     //sketch1.rect(sketch1.mouseX, sketch1.mouseY, 50, 50);
@@ -29,14 +29,14 @@ const s1 = (sketch1) => {
     let x = sketch1.mouseX;
     let y = sketch1.mouseY;
     let d = sketch1.dist(x, y, centroX, centroY);
-    let maxTam = sketch1.width/3;
-    let tam = sketch1.map(d, 0, ancho/2, maxTam, 0);
+    let maxTam = sketch1.width / 3;
+    let tam = sketch1.map(d, 0, ancho / 2, maxTam, 0);
 
     //console.log(d);
 
 
-    if (d < ancho/2) {
-    sketch1.ellipse(x, y, tam, tam);
+    if (d < ancho / 2) {
+      sketch1.ellipse(x, y, tam, tam);
     }
 
   };
@@ -91,7 +91,7 @@ const s2 = (sketch2) => {
     sketch2.rectMode(sketch2.CENTER);
     sketch2.rect(0, 0, 50, 50);
     sketch2.pop();
-   //console.log(sketch2.mouseX);
+    //console.log(sketch2.mouseX);
 
   };
 
@@ -105,6 +105,13 @@ const s2 = (sketch2) => {
 };
 
 let miP52 = new p5(s2, document.getElementById('canvasp5-2'));
+
+
+
+
+
+
+//////////
 
 
 /*let ancho;
