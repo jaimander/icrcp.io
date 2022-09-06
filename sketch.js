@@ -29,7 +29,8 @@ const s1 = (sketch1) => {
     let x = sketch1.mouseX;
     let y = sketch1.mouseY;
     let d = sketch1.dist(x, y, centroX, centroY);
-    let tam = sketch1.map(d, 0, ancho/2, 200, 0);
+    let maxTam = sketch1.width/3;
+    let tam = sketch1.map(d, 0, ancho/2, maxTam, 0);
 
     //console.log(d);
 
@@ -50,10 +51,6 @@ const s1 = (sketch1) => {
 };
 
 let myp51 = new p5(s1, document.getElementById('canvasp5-1'));
-
-
-
-
 
 
 
