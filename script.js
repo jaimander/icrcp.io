@@ -38,8 +38,8 @@ const handleStart = (event) => {
     ctx.fillRect(touches[i].pageX - 2, touches[i].pageY - 2, 4, 4);
   }
 
-  //canvasp51.documentElement.style.overflow = 'hidden';
-  //canvasp52.documentElement.style.overflow = 'hidden';
+  canvasp51.style.overflow = 'hidden';
+  //canvasp52.style.overflow = 'hidden';
 
 }
 
@@ -61,6 +61,9 @@ function handleEnd(event) {
     ctx.strokeStyle = "#59bfff";
     ctx.fillRect(touches[i].pageX - 2, touches[i].pageY - 2, 4, 4);
   }
+
+  canvasp51.style.overflow = 'auto';
+  //canvasp52.style.overflow = 'auto';
 }
 
 
@@ -71,10 +74,12 @@ canvas.addEventListener('touchmove', handleMove);
 canvas.addEventListener("touchstart", handleStart, false);
 canvas.addEventListener("touchend", handleEnd, false);
 
+
 canvasp51.addEventListener("touchstart", handleStart, false);
 canvasp51.addEventListener("touchend", handleEnd, false);
-
+/*
 canvasp52.addEventListener("touchstart", handleStart, false);
 canvasp52.addEventListener("touchend", handleEnd, false);
+*/
 
 
