@@ -14,12 +14,14 @@ a {
   width: 100%;
 }
 
-#canvas--p5js {
-  width: 100%;
-}
 #defaultCanvas0 {
   width: 100%;
 }
+
+#canvasp5-1 {
+  width: 100%;
+}
+
 .p5Canvas {
   width: 100%;
 }

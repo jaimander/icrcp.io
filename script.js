@@ -6,6 +6,7 @@ canvas.height = window.innerHeight;
 
 let counter = 0;
 
+
 const handleMouseMove = (event) => {
   // console.log(counter);
   const x = event.clientX;
@@ -13,7 +14,8 @@ const handleMouseMove = (event) => {
   ctx.beginPath();
   ctx.arc(x, y, counter, 0, 2 * Math.PI);
   ctx.stroke();
-  counter += 0.1;
+  ctx.strokeStyle = "#59bfff";
+  counter += 0.3;
 
   // console.log(event);
 };
