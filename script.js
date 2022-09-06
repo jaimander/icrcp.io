@@ -24,35 +24,26 @@ const handleMouseClic = (event) => {
   counter = 0;
 };
 
-function handleStart(event) {
+let ongoingTouches = [];
+
+const handleStart = (event) => {
   event.preventDefault();
   var touches = event.changedTouches;
-
-  for (var i=0; i<touches.length; i++) {
-    ongoingTouches.push(touches[i]);
-    var color = colorForTouch(touches[i]);
-    ctx.fillStyle = color;
-    ctx.fillRect(touches[i].pageX-2, touches[i].pageY-2, 4, 4);
+  
+  for (var i = 0; i < touches.length; i++) {
+    ctx.strokeStyle = "#59bfff";
+    ctx.fillRect(touches[i].pageX - 2, touches[i].pageY - 2, 4, 4);
   }
+  
 }
 
 function handleMove(event) {
   event.preventDefault();
   var touches = event.changedTouches;
 
-  ctx.lineWidth = 4;
-
-  for (var i=0; i<touches.length; i++) {
-    var color = colorForTouch(touches[i]);
-    var idx = ongoingTouchIndexById(touches[i].identifier);
-
-    ctx.fillStyle = color;
-    ctx.beginPath();
-    ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
-    ctx.lineTo(touches[i].pageX, touches[i].pageY);
-    ctx.closePath();
-    ctx.stroke();
-    ongoingTouches.splice(idx, 1, touches[i]);  // swap in the new touch record
+  for (var i = 0; i < touches.length; i++) {
+    ctx.strokeStyle = "#59bfff";
+    ctx.fillRect(touches[i].pageX - 2, touches[i].pageY - 2, 4, 4);
   }
 }
 
@@ -60,17 +51,9 @@ function handleEnd(event) {
   event.preventDefault();
   var touches = event.changedTouches;
 
-  ctx.lineWidth = 4;
-
-  for (var i=0; i<touches.length; i++) {
-    var color = colorForTouch(touches[i]);
-    var idx = ongoingTouchIndexById(touches[i].identifier);
-
-    ctx.fillStyle = color;
-    ctx.beginPath();
-    ctx.moveTo(ongoingTouches[i].pageX, ongoingTouches[i].pageY);
-    ctx.lineTo(touches[i].pageX, touches[i].pageY);
-    ongoingTouches.splice(i, 1);  // remove it; we're done
+  for (var i = 0; i < touches.length; i++) {
+    ctx.strokeStyle = "#59bfff";
+    ctx.fillRect(touches[i].pageX - 2, touches[i].pageY - 2, 4, 4);
   }
 }
 
@@ -79,6 +62,8 @@ function handleEnd(event) {
 
 canvas.addEventListener('mousemove', handleMouseMove);
 canvas.addEventListener('click', handleMouseClic);
+
 canvas.addEventListener('touchmove', handleMove);
 canvas.addEventListener("touchstart", handleStart, false);
 canvas.addEventListener("touchend", handleEnd, false);
+
