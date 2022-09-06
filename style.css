@@ -1,9 +1,11 @@
+@import url(//fonts.googleapis.com/css?family=Work+Sans);
+
 body {
   background: #d3ebfa;
 }
 
 * {
-  font-family: sans-serif;
+  font-family: 'Work Sans', sans-serif;
 }
 
 a {
