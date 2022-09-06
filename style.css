@@ -1,24 +1,80 @@
 body {
- background: #d3ebfa ;
+  background: #d3ebfa;
+}
+
+* {
+  font-family: sans-serif;
+}
+
+a {
+  color: #000000;
 }
 
 .gallery__img {
   width: 100%;
 }
 
-.section--top{
+#canvas--p5js {
+  width: 100%;
+}
+#defaultCanvas0 {
+  width: 100%;
+}
+.p5Canvas {
+  width: 100%;
+}
+
+.section--top {
   height: 100vh; /* viewport height */
 }
 
-.img--logo{
+.section--about {
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 40px;
+}
+
+.about--text {
+  padding-bottom: 40px;
+}
+
+.border {
+  border-top: 1px solid #000000;
+}
+
+.img--arriba {
   width: 100vw;
   position: absolute;
+  -webkit-mask: linear-gradient(#000000, transparent);
 }
 
-.img--nombrecompleto{
-  top: 0;
-}
-
-.img--siglas{
+.img--abajo {
   bottom: 0;
+  width: 100vw;
+  position: absolute;
+  -webkit-mask: linear-gradient(transparent, #000000);
+}
+
+.img--siglas {
+  bottom: 0;
+}
+
+.gallery__item {
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.contact__inner {
+  display: flex;
+}
+
+.contact__column {
+  width: 50%;
+}
+
+.section--contact {
+  padding-left: 20px;
+  padding-right: 20px;
 }
